@@ -22,13 +22,13 @@
 	u16 len;	
 	u16 times=0;
 	delay_init();	    	 //延时函数初始化	  
-	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2); //设置NVIC中断分组2:2位抢占优先级，2位响应优先级
-	uart_init(115200);	 //串口初始化为115200
- 	LED_Init();			     //LED端口初始化
-	KEY_Init();          //初始化与按键连接的硬件接口
+//	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2); //设置NVIC中断分组2:2位抢占优先级，2位响应优先级
+	uart_init(115200);	 	//串口初始化为115200
+// 	LED_Init();			    //LED端口初始化
+//	KEY_Init();          	//初始化与按键连接的硬件接口
  	while(1)
 	{
-		if(USART_RX_STA&0x8000)
+/*		if(USART_RX_STA&0x8000)
 		{					   
 			len=USART_RX_STA&0x3fff;//得到此次接收到的数据长度
 			printf("\r\n您发送的消息为:\r\n\r\n");
@@ -51,6 +51,11 @@
 			if(times%30==0)LED0=!LED0;//闪烁LED,提示系统正在运行.
 			delay_ms(10);   
 		}
+*/
+	while(USART_GetFlagStatus(USART1,USART_FLAG_TXE) == 0);
+	USART_SendData(USART1,0x01);
+	delay_ms(500);
+
 	}	 
  }
 

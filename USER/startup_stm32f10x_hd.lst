@@ -565,11 +565,10 @@ ARM Macro Assembler    Page 9
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
 ork --depend=..\obj\startup_stm32f10x_hd.d -o..\obj\startup_stm32f10x_hd.o -I"E
-:\STM32学习\ARM资料\战舰V3 资料盘(A盘)\4，程序源码\2，标准例程-库函数版本\实验4
- 串口实验\USER\RTE" -IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Inclu
-de -IC:\Keil_v5\ARM\CMSIS\Include --predefine="__UVISION_VERSION SETA 514" --pr
-edefine="STM32F10X_HD SETA 1" --list=.\startup_stm32f10x_hd.lst ..\CORE\startup
-_stm32f10x_hd.s
+:\Nuts Cloud\program\UART\USER\RTE" -IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.
+0.5\Device\Include -IC:\Keil_v5\ARM\CMSIS\Include --predefine="__UVISION_VERSIO
+N SETA 514" --predefine="STM32F10X_HD SETA 1" --list=.\startup_stm32f10x_hd.lst
+ ..\CORE\startup_stm32f10x_hd.s
 
 
 
